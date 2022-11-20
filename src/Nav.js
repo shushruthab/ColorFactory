@@ -10,7 +10,7 @@ const Nav = () => {
             <Route exact path="/colors" element={<Colors />}></Route>
             <Route exact path="/colors/new" element={<ColorForm />}></Route>
             <Route exact path="/colors/:name" element={<ClickedColor />}></Route>
-            <Route path="/colors/*" element={<Navigate to="/colors" />} />
+            <Route path="*" element={<Navigate to="/colors" />} />
         </Routes>
         </>
     )

@@ -7,12 +7,16 @@ const ClickedColor = () => {
     const location = useLocation();
     const navigate = useNavigate();
     let bgcolor = location.state.hexcode;
+
+    if (!bgcolor) {
+        navigate('/colors')
+    }
     useEffect(() => {
-        document.body.style.backgroundColor = bgcolor; }, [])
+        document.body.style.backgroundColor = bgcolor; }, 
+        [])
 
     const handleClick = (e) => {
         e.preventDefault();
-        document.body.style.backgroundColor = "transparent";
         navigate('/colors');
     }
     

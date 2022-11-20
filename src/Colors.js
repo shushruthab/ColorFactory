@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import './Colors.css';
 import {Link} from 'react-router-dom';
@@ -11,13 +11,14 @@ const Colors = () => {
         ["Blue", "#0000FF"]
     ]);
 
-
+    useEffect(() => {
+        document.body.style.backgroundColor = "transparent"; }, [])
     
     const navigate = useNavigate();
     const location = useLocation();
     const newcolor = location.state;
     if (newcolor) {
-        colors.push(newcolor);
+        colors.unshift(newcolor);
     }
 
     const handleClick = (e) => {
