@@ -1,0 +1,19 @@
+.palette {
+    
+    align-items: center;
+    text-align: center;
+}
+
+.colors {
+    align-items: center;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+.btn {
+    text-align: center;
+    margin: 10px;
+}
+
